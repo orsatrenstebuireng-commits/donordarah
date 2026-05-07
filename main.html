@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Donor Darah SMA Trensains Tebuireng</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#5b403d",
+                        "surface-dim": "#f1d3d0",
+                        "surface-tint": "#ba1a20",
+                        "on-tertiary-fixed-variant": "#004d65",
+                        "primary": "#af101a",
+                        "surface-container": "#ffe9e7",
+                        "inverse-surface": "#3e2c2a",
+                        "on-tertiary-container": "#e9f7ff",
+                        "on-primary-container": "#fff2f0",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#7bd1f8",
+                        "tertiary-container": "#00799c",
+                        "on-background": "#271816",
+                        "on-primary-fixed-variant": "#930010",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#d32f2f",
+                        "on-secondary-container": "#616363",
+                        "surface-container-high": "#ffe2de",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "error-container": "#ffdad6",
+                        "surface": "#fff8f7",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#410003",
+                        "surface-bright": "#fff8f7",
+                        "on-secondary-fixed-variant": "#454747",
+                        "inverse-on-surface": "#ffedeb",
+                        "outline": "#8f6f6c",
+                        "background": "#fff8f7",
+                        "inverse-primary": "#ffb3ac",
+                        "secondary-fixed": "#e2e2e2",
+                        "secondary-container": "#dfe0e0",
+                        "surface-container-low": "#fff0ef",
+                        "outline-variant": "#e4beba",
+                        "on-tertiary-fixed": "#001f2a",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-fixed": "#bee9ff",
+                        "secondary": "#5d5f5f",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#005f7b",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container-highest": "#f9dcd9",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-variant": "#f9dcd9",
+                        "on-surface": "#271816"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "margin": "20px"
+                    },
+                    "fontFamily": {
+                        "queue-number": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-hero": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "queue-number": [
+                            "220px",
+                            {
+                                "lineHeight": "1",
+                                "letterSpacing": "-0.04em",
+                                "fontWeight": "900"
+                            }
+                        ],
+                        "label-bold": [
+                            "14px",
+                            {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-lg": [
+                            "32px",
+                            {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "display-hero": [
+                            "72px",
+                            {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Animasi transisi angka */
+        .number-transition {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-gutter h-16 bg-surface/90 backdrop-blur-md border-b border-outline-variant shadow-sm transition-all">
+        <div class="flex items-center gap-2 md:gap-sm">
+            <img alt="Donor Darah SMA Trensains Logo" class="h-8 w-8 object-contain" src="ts.png"/>
+            <span class="text-lg md:text-headline-md font-headline-md font-bold text-primary truncate">Donor Darah SMA Trensains Tebuireng</span>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24 pb-xl flex flex-col gap-8 md:gap-xl">
+        <!-- Hero Section (Live Queue) -->
+        <section class="w-full max-w-7xl mx-auto px-4 md:px-gutter flex flex-col items-center justify-center mt-4 md:mt-lg relative">
+            <div class="absolute inset-0 bg-primary/5 blur-3xl rounded-full w-[200px] h-[200px] md:w-[300px] md:h-[300px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none"></div>
+            
+            <div class="relative z-10 flex flex-col items-center w-full">
+                <div class="inline-flex items-center gap-xs bg-surface-container-high px-sm py-xs rounded-full mb-4 md:mb-md shadow-sm border border-outline-variant">
+                    <span id="live-indicator" class="w-3 h-3 rounded-full bg-primary animate-pulse relative">
+                        <span class="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></span>
+                    </span>
+                    <span id="live-text" class="text-label-bold font-label-bold text-on-surface tracking-wide uppercase">Live Update</span>
+                </div>
+                
+                <h1 class="text-xl md:text-headline-md font-headline-md text-on-surface-variant mb-xs text-center">Nomor Antrean Saat Ini</h1>
+                
+                <!-- Main Queue Number -->
+                <div id="main-queue-number" class="text-6xl md:text-queue-number font-queue-number text-primary drop-shadow-sm my-4 md:my-sm tracking-tighter number-transition">
+                    ...
+                </div>
+
+                <div class="grid-cols-1 md:grid-cols-2 gap-4 md:gap-md w-full max-w-2xl mt-4 md:mt-lg flex flex-col items-center justify-center">
+                    <!-- Status Card: Sedang Dilayani -->
+                    <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-md shadow-sm flex flex-col items-center justify-center gap-xs transform transition hover:-translate-y-1 w-full max-w-sm">
+                        <div id="status-container" class="flex items-center gap-2 text-primary mb-2 transition-colors">
+                            <span id="status-icon" class="material-symbols-outlined icon-fill text-[32px]">vital_signs</span>
+                            <span id="status-text" class="text-xl md:text-headline-md font-headline-md uppercase text-center">Sedang Dilayani</span>
+                        </div>
+                        <span id="card-queue-number" class="text-3xl md:text-headline-lg font-headline-lg text-on-surface number-transition">...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Info Section -->
+        <section class="w-full max-w-7xl mx-auto px-4 md:px-gutter mt-8 md:mt-0">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-md">
+                <!-- Info Card 1 -->
+                <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-md shadow-sm flex items-start gap-4 md:gap-md group hover:border-primary transition-colors">
+                    <div class="w-12 h-12 shrink-0 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                        <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <div class="flex flex-col pt-1">
+                        <span class="text-sm md:text-label-bold font-label-bold text-on-surface-variant">Lokasi</span>
+                        <span class="text-base md:text-body-lg font-body-lg text-on-surface font-semibold mt-1">SMA Trensains Tebuireng</span>
+                    </div>
+                </div>
+                <!-- Info Card 2 -->
+                <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-md shadow-sm flex items-start gap-4 md:gap-md group hover:border-primary transition-colors">
+                    <div class="w-12 h-12 shrink-0 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                        <span class="material-symbols-outlined">meeting_room</span>
+                    </div>
+                    <div class="flex flex-col pt-1">
+                        <span class="text-sm md:text-label-bold font-label-bold text-on-surface-variant">Kelas</span>
+                        <span class="text-base md:text-body-lg font-body-lg text-on-surface font-semibold mt-1">12 Sains 4</span>
+                    </div>
+                </div>
+                <!-- Info Card 3 -->
+                <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-md shadow-sm flex items-start gap-4 md:gap-md group hover:border-primary transition-colors">
+                    <div class="w-12 h-12 shrink-0 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                        <span class="material-symbols-outlined">schedule</span>
+                    </div>
+                    <div class="flex flex-col pt-1">
+                        <span class="text-sm md:text-label-bold font-label-bold text-on-surface-variant">Waktu Mulai</span>
+                        <span class="text-base md:text-body-lg font-body-lg text-on-surface font-semibold mt-1">08.00 Pagi - Selesai</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation Procedure Section -->
+        <section class="w-full max-w-4xl mx-auto px-4 md:px-gutter mt-12 md:mt-lg">
+            <div class="text-center mb-8 md:mb-lg">
+                <h2 class="text-2xl md:text-headline-lg font-headline-lg text-on-surface">Tata Cara Donor Darah</h2>
+                <p class="text-sm md:text-body-md font-body-md text-on-surface-variant mt-2 md:mt-sm">Persiapkan diri Anda sebelum mengikuti kegiatan donor darah.</p>
+            </div>
+            
+            <div class="flex flex-col gap-4 md:gap-sm relative">
+                <!-- Vertical Line Connector for Desktop -->
+                <div class="hidden md:block absolute left-8 top-8 bottom-8 w-px bg-outline-variant z-0"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-row items-center md:items-center gap-4 md:gap-md bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-md shadow-sm">
+                    <div class="w-10 h-10 shrink-0 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-label-bold font-label-bold shadow-sm">1</div>
+                    <div class="flex flex-col gap-1 md:gap-xs flex-grow">
+                        <h3 class="text-lg md:text-headline-md font-headline-md text-on-surface font-semibold">Kondisi Fit</h3>
+                        <p class="text-sm md:text-body-md font-body-md text-on-surface-variant">Pastikan kondisi tubuh sehat secara jasmani dan rohani.</p>
+                    </div>
+                    <div class="hidden md:flex w-12 h-12 text-outline items-center justify-center">
+                        <span class="material-symbols-outlined text-[32px]">health_and_safety</span>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-row items-center md:items-center gap-4 md:gap-md bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-md shadow-sm">
+                    <div class="w-10 h-10 shrink-0 rounded-full bg-surface-container text-primary border border-primary flex items-center justify-center font-bold text-label-bold font-label-bold">2</div>
+                    <div class="flex flex-col gap-1 md:gap-xs flex-grow">
+                        <h3 class="text-lg md:text-headline-md font-headline-md text-on-surface font-semibold">Sarapan</h3>
+                        <p class="text-sm md:text-body-md font-body-md text-on-surface-variant">Sudah makan dan minum secukupnya sebelum mendonorkan darah.</p>
+                    </div>
+                    <div class="hidden md:flex w-12 h-12 text-outline items-center justify-center">
+                        <span class="material-symbols-outlined text-[32px]">restaurant</span>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-row items-center md:items-center gap-4 md:gap-md bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-md shadow-sm">
+                    <div class="w-10 h-10 shrink-0 rounded-full bg-surface-container text-primary border border-primary flex items-center justify-center font-bold text-label-bold font-label-bold">3</div>
+                    <div class="flex flex-col gap-1 md:gap-xs flex-grow">
+                        <h3 class="text-lg md:text-headline-md font-headline-md text-on-surface font-semibold">Istirahat Cukup</h3>
+                        <p class="text-sm md:text-body-md font-body-md text-on-surface-variant">Tidur cukup minimal 6-8 jam pada malam sebelum hari H.</p>
+                    </div>
+                    <div class="hidden md:flex w-12 h-12 text-outline items-center justify-center">
+                        <span class="material-symbols-outlined text-[32px]">bed</span>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative z-10 flex flex-row items-center md:items-center gap-4 md:gap-md bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-md shadow-sm">
+                    <div class="w-10 h-10 shrink-0 rounded-full bg-surface-container text-primary border border-primary flex items-center justify-center font-bold text-label-bold font-label-bold">4</div>
+                    <div class="flex flex-col gap-1 md:gap-xs flex-grow">
+                        <h3 class="text-lg md:text-headline-md font-headline-md text-on-surface font-semibold">Bawa Identitas</h3>
+                        <p class="text-sm md:text-body-md font-body-md text-on-surface-variant">Membawa identitas diri (KTP/Kartu Pelajar) saat proses registrasi.</p>
+                    </div>
+                    <div class="hidden md:flex w-12 h-12 text-outline items-center justify-center">
+                        <span class="material-symbols-outlined text-[32px]">badge</span>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="relative z-10 flex flex-row items-center md:items-center gap-4 md:gap-md bg-surface-container-lowest border border-outline-variant rounded-xl p-4 md:p-md shadow-sm">
+                    <div class="w-10 h-10 shrink-0 rounded-full bg-surface-container text-primary border border-primary flex items-center justify-center font-bold text-label-bold font-label-bold">5</div>
+                    <div class="flex flex-col gap-1 md:gap-xs flex-grow">
+                        <h3 class="text-lg md:text-headline-md font-headline-md text-on-surface font-semibold">Syarat Medis</h3>
+                        <p class="text-sm md:text-body-md font-body-md text-on-surface-variant">Tidak sedang sakit, demam, atau mengonsumsi obat tertentu dalam 3 hari terakhir.</p>
+                    </div>
+                    <div class="hidden md:flex w-12 h-12 text-outline items-center justify-center">
+                        <span class="material-symbols-outlined text-[32px]">medical_services</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 md:py-md px-4 md:px-gutter flex flex-col md:flex-row justify-between items-center gap-4 md:gap-sm max-w-7xl mx-auto border-t border-outline-variant bg-surface-container-low mt-8 md:mt-0 text-center md:text-left">
+        <div class="flex items-center gap-sm">
+            <span class="text-base md:text-headline-sm font-headline-sm font-bold text-primary">Donor Darah SMA Trensains</span>
+        </div>
+        <p class="text-sm md:text-body-md font-body-md text-on-surface-variant">
+            © 2026 SMA Trensains Tebuireng. Orsantrens Tebuireng.
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module">
+        // 2. Setup Firebase Realtime (Firestore)
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, onSnapshot, setDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Konfigurasi Environment & Init Firebase
+        let app, auth, db, appId, userId;
+        const mainQueueEl = document.getElementById('main-queue-number');
+        const cardQueueEl = document.getElementById('card-queue-number');
+        
+        try {
+            const firebaseConfig = {
+                apiKey: "AIzaSyAsZlE0s2S3mzX98GSxJks5YbTtRTle9bU",
+                authDomain: "donor-darah-ab72f.firebaseapp.com",
+                projectId: "donor-darah-ab72f",
+                storageBucket: "donor-darah-ab72f.firebasestorage.app",
+                messagingSenderId: "844358605676",
+                appId: "1:844358605676:web:d7480c3958ecb3efd8f149"
+                };
+            app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+            appId = "donor-app";
+            
+            initAuth();
+        } catch (e) {
+            console.error("Firebase init failed, UI will fall back to local state.", e);
+            fallbackToLocal();
+        }
+
+        // Autentikasi terlebih dahulu sebelum akses database
+        async function initAuth() {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Authentication error:", error);
+                fallbackToLocal();
+            }
+        }
+
+        // Memantau state autentikasi
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                userId = user.uid;
+                startFirestoreListener();
+            }
+        });
+
+        // Koneksi Realtime menggunakan onSnapshot Firestore
+        // Koneksi Realtime menggunakan onSnapshot Firestore
+        function startFirestoreListener() {
+            const queueDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'queue_status', 'current');
+            
+            onSnapshot(queueDocRef, (docSnap) => {
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    // Kirim data number dan status ke UI Display
+                    updateUIDisplay(data.number, data.status);
+                } else {
+                    // Jika dokumen belum ada di database, inisialisasi awal
+                    updateQueueInDatabase("A-001", "Sedang Dilayani");
+                }
+            }, (error) => {
+                console.error("Error listening to Firestore:", error);
+                fallbackToLocal();
+            });
+        }
+
+        // Fungsi pembaruan UI (Sekarang menerima parameter status)
+        function updateUIDisplay(number, status = "Sedang Dilayani") {
+            mainQueueEl.innerText = number;
+            cardQueueEl.innerText = number;
+
+            // Ambil elemen status yang sudah diberi ID
+            const statusContainer = document.getElementById('status-container');
+            const statusIcon = document.getElementById('status-icon');
+            const statusText = document.getElementById('status-text');
+
+            // Sesuaikan warna, ikon, dan teks berdasarkan status dari admin
+            if (status === 'Sedang Dilayani') {
+                statusText.innerText = 'Sedang Dilayani';
+                statusIcon.innerText = 'vital_signs';
+                statusContainer.className = 'flex items-center gap-xs text-[#2E7D32] mb-xs transition-colors';
+            } else if (status === 'Istirahat') {
+                statusText.innerText = 'Istirahat';
+                statusIcon.innerText = 'coffee'; // Ikon istirahat
+                statusContainer.className = 'flex items-center gap-xs text-[#FBC02D] mb-xs transition-colors';
+            } else if (status === 'Selesai') {
+                statusText.innerText = 'Selesai';
+                statusIcon.innerText = 'check_circle';
+                statusContainer.className = 'flex items-center gap-xs text-secondary mb-xs transition-colors';
+            }
+            
+            // Sedikit efek pop saat angka berubah
+            mainQueueEl.classList.add('scale-110');
+            setTimeout(() => {
+                mainQueueEl.classList.remove('scale-110');
+            }, 150);
+        }
+
+        // Menyimpan data kembali ke Firestore (Tambahan fallback status awal)
+        async function updateQueueInDatabase(newNumber, currentStatus = "Sedang Dilayani") {
+            if (!auth.currentUser) return; // Guard clause jika belum auth
+            
+            const queueDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'queue_status', 'current');
+            try {
+                await setDoc(queueDocRef, { 
+                    number: newNumber, 
+                    status: currentStatus,
+                    updatedAt: new Date().toISOString(),
+                    updatedBy: userId
+                });
+            } catch (e) {
+                console.error("Gagal memperbarui antrean di Firebase:", e);
+                // Fallback visual update jika koneksi database gagal
+                updateUIDisplay(newNumber, currentStatus); 
+            }
+        }
+    </script>
+</body>
+</html>
